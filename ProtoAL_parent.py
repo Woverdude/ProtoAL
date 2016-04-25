@@ -1,4 +1,4 @@
-__author__ = 'Woverdude'
+__author__ = 'Wover'
 
 import time
 import sys
@@ -10,10 +10,11 @@ import os
 
 class ProtoAL:
 
-    def __init__(self):
+    def __init__(self, reproductionCycle = 10):
 
         self.age = 0
         self.name = sys.argv[0]
+        self.reproductionCycle = reproductionCycle
 
         #Endless loop
         while True:
@@ -22,7 +23,7 @@ class ProtoAL:
             #Propogation should be measured according to readiness, not time.
             while self.age <= 1:
 
-                time.sleep(10)
+                time.sleep(self.reproductionCycle)
 
                 self.age += 1
 
